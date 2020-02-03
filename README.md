@@ -31,5 +31,5 @@ To import and track one of the datasets from the dataset storage to a GitHub rep
 - Run the command `dvc init` in case `<github-repo>` is not a DVC repository.
 - Run the command: 
   ```bash
-  dvc get -o /destination/path https://github.com/emolinaro/dataset-registry/tree/master/<github-repo>
+  dvc get -o /destination/path https://github.com/emolinaro/dataset-registry <github-repo>
   ```
