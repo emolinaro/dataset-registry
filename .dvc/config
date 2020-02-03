@@ -1,11 +1,11 @@
 ['remote "abacus-storage-scRNAseq-AAE"']
 url = ssh://fe.deic.sdu.dk:/work/sduescience/molinaro/dataset-storage/scRNAseq-AAE
-port = 2222
+port = 22
 user = molinaro
 keyfile = /Users/molinaro/.ssh/id_rsa
 ['remote "abacus-storage"']
 url = ssh://fe.deic.sdu.dk:/work/sduescience/molinaro/dataset-storage/
-port = 2222
+port = 22
 user = molinaro
 keyfile = /Users/molinaro/.ssh/id_rsa
 [core]
