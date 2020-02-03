@@ -1,0 +1,6 @@
+['remote "dropbox-storage"']
+url = /Users/molinaro/Dropbox/dataset-storage
+[core]
+remote = dropbox-storage-scRNAseq-AAE
+['remote "dropbox-storage-scRNAseq-AAE"']
+url = /Users/molinaro/Dropbox/dataset-storage/scRNAseq-AAE
