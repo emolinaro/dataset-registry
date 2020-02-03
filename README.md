@@ -2,6 +2,7 @@
 Dataset registry for multiple DVC projects.
 
 To add new datasets:
+- clone this repository
 - create a new folder with the same name as the GitHub repository (`github-repo`)
 - copy the project data inside the folder `<github-repo>`
 - inside `<github-repo>` run the command: `dvc add .`
