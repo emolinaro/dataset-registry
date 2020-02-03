@@ -1,8 +1,12 @@
-['remote "dropbox-storage"']
-url = /Users/molinaro/Dropbox/dataset-storage
+['remote "abacus-storage-scRNAseq-AAE"']
+url = ssh://fe.deic.sdu.dk:/work/sduescience/molinaro/dataset-storage/scRNAseq-AAE
+port = 2222
+user = molinaro
+keyfile = /Users/molinaro/.ssh/id_rsa
+['remote "abacus-storage"']
+url = ssh://fe.deic.sdu.dk:/work/sduescience/molinaro/dataset-storage/
+port = 2222
+user = molinaro
+keyfile = /Users/molinaro/.ssh/id_rsa
 [core]
-remote = dropbox-storage-scRNAseq-AAE
-['remote "dropbox-storage-scRNAseq-AAE"']
-url = /Users/molinaro/Dropbox/dataset-storage/scRNAseq-AAE
-[cache]
-dir = /Users/molinaro/Dropbox/dataset-storage
+remote = abacus-storage
