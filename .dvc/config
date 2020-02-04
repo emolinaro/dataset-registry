@@ -9,6 +9,11 @@ port = 22
 user = molinaro
 keyfile = /Users/molinaro/.ssh/id_rsa
 [core]
-remote = abacus-storage
+remote = abacus-storage-HABITUS
 [cache]
 dir = /tmp/cache
+['remote "abacus-storage-HABITUS"']
+url = ssh://fe.deic.sdu.dk:/work/sduescience/molinaro/dataset-storage/HABITUS
+user = molinaro
+port = 22
+keyfile = /Users/molinaro/.ssh/id_rsa
