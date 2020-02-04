@@ -26,6 +26,14 @@ To add new datasets used in a DVC project repository on GitHub:
   ```bash
   dvc cache dir /tmp/cache
   ```
+  Alternatively, use SSH remote to be used as cache location for SSH files
+  ```bash
+  dvc remote add ssh-cache ssh://fe.deic.sdu.dk:/work/sduescience/molinaro/dataset-storage/cache
+  dvc remote modify ssh-cache user molinaro
+  dvc remote modify ssh-cache port 22
+  dvc remote modify ssh-cache keyfile ~/.ssh/id_rsa
+  dvc config cache.ssh ssh-cache
+  ```
 ## Import data from the dataset registry
 
 To import and track one of the datasets from the dataset storage to a GitHub repository `<github-repo>`:
