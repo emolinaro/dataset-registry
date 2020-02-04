@@ -36,6 +36,7 @@ To import and track one of the datasets from the dataset storage to a GitHub rep
   ```bash
   dvc get -o /destination/path https://github.com/emolinaro/dataset-registry <github-repo>
   ```
+  Use the flag `--rev` to select a specific branch, tag, or commit.
 - Set remote storage:
   ```bash
   dvc remote add -d abacus-storage-<github-repo>  ssh://fe.deic.sdu.dk:/work/sduescience/molinaro/dataset-storage/<github-repo>
