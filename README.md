@@ -6,14 +6,14 @@ Dataset registry for multiple DVC projects.
 To add new datasets used in a DVC project repository on GitHub:
 
 - Create a new folder with the same name as the GitHub repository (`github-repo`) where the project source code is stored.
-- Copy the project data inside the folder `<github-repo>`.
-- Inside `<github-repo>` run the command: `dvc add .`; this will create a new DVC-File, which is a pointer to the real dataset.
+- Copy the `<project-data>` inside the folder `<github-repo>`.
+- Inside `<github-repo>` run the command: `dvc add <project-data>`; this will create a new DVC-File, which is a pointer to the real dataset.
 - Create a new remote storage folder (in this case the storage folder is on Abacus):
   ```bash
   dvc remote add -d abacus-storage-<github-repo>  ssh://fe.deic.sdu.dk:/work/sduescience/molinaro/dataset-storage/<github-repo>
-  dvc remote modify abacus-storage user molinaro
-  dvc remote modify abacus-storage port 22
-  dvc remote modify abacus-storage keyfile ~/.ssh/id_rsa
+  dvc remote modify abacus-storage-<github-repo> user molinaro
+  dvc remote modify abacus-storage-<github-repo> port 22
+  dvc remote modify abacus-storage-<github-repo> keyfile ~/.ssh/id_rsa
   ```
 - `git commit` the new DVC-File.
 - Push the data to the selected dataset storage:
@@ -25,14 +25,6 @@ To add new datasets used in a DVC project repository on GitHub:
 - (Optional) Change cache directory:
   ```bash
   dvc cache dir /tmp/cache
-  ```
-  Alternatively, use SSH remote to be used as cache location for SSH files
-  ```bash
-  dvc remote add ssh-cache ssh://fe.deic.sdu.dk:/work/sduescience/molinaro/dataset-storage/cache
-  dvc remote modify ssh-cache user molinaro
-  dvc remote modify ssh-cache port 22
-  dvc remote modify ssh-cache keyfile ~/.ssh/id_rsa
-  dvc config cache.ssh ssh-cache
   ```
 ## Import data from the dataset registry
 
@@ -48,9 +40,9 @@ To import and track one of the datasets from the dataset storage to a GitHub rep
 - Set remote storage:
   ```bash
   dvc remote add -d abacus-storage-<github-repo>  ssh://fe.deic.sdu.dk:/work/sduescience/molinaro/dataset-storage/<github-repo>
-  dvc remote modify abacus-storage user molinaro
-  dvc remote modify abacus-storage port 22
-  dvc remote modify abacus-storage keyfile ~/.ssh/id_rsa
+  dvc remote modify abacus-storage-<github-repo> user molinaro
+  dvc remote modify abacus-storage-<github-repo> port 22
+  dvc remote modify abacus-storage-<github-repo> keyfile ~/.ssh/id_rsa
   ```
  - (Optional) Change cache directory:
   ```bash
