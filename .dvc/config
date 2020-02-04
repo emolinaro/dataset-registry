@@ -10,3 +10,5 @@ user = molinaro
 keyfile = /Users/molinaro/.ssh/id_rsa
 [core]
 remote = abacus-storage
+[cache]
+dir = /tmp/cache
