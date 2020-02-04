@@ -11,9 +11,9 @@ To add new datasets used in a DVC project repository on GitHub:
 - Create a new remote storage folder (in this case the storage folder is on Abacus):
   ```bash
   dvc remote add -d abacus-storage-<github-repo>  ssh://fe.deic.sdu.dk:/work/sduescience/molinaro/dataset-storage/<github-repo>
-  dvc remote modify abacus-storage user molinaro
-  dvc remote modify abacus-storage port 22
-  dvc remote modify abacus-storage keyfile ~/.ssh/id_rsa
+  dvc remote modify abacus-storage-<github-repo> user molinaro
+  dvc remote modify abacus-storage-<github-repo> port 22
+  dvc remote modify abacus-storage-<github-repo> keyfile ~/.ssh/id_rsa
   ```
 - `git commit` the new DVC-File.
 - Push the data to the selected dataset storage:
@@ -40,9 +40,9 @@ To import and track one of the datasets from the dataset storage to a GitHub rep
 - Set remote storage:
   ```bash
   dvc remote add -d abacus-storage-<github-repo>  ssh://fe.deic.sdu.dk:/work/sduescience/molinaro/dataset-storage/<github-repo>
-  dvc remote modify abacus-storage user molinaro
-  dvc remote modify abacus-storage port 22
-  dvc remote modify abacus-storage keyfile ~/.ssh/id_rsa
+  dvc remote modify abacus-storage-<github-repo> user molinaro
+  dvc remote modify abacus-storage-<github-repo> port 22
+  dvc remote modify abacus-storage-<github-repo> keyfile ~/.ssh/id_rsa
   ```
  - (Optional) Change cache directory:
   ```bash
