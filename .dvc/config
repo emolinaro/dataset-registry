@@ -9,7 +9,7 @@ port = 22
 user = molinaro
 keyfile = /Users/molinaro/.ssh/id_rsa
 [core]
-remote = abacus-storage-HABITUS
+remote = abacus-storage
 [cache]
 dir = /tmp/cache
 ['remote "abacus-storage-HABITUS"']
@@ -17,3 +17,9 @@ url = ssh://fe.deic.sdu.dk:/work/sduescience/molinaro/dataset-storage/HABITUS
 user = molinaro
 port = 22
 keyfile = /Users/molinaro/.ssh/id_rsa
+['remote "ucloud-storage"']
+url = /Volumes/dav.cloud.sdu.dk/dataset-storage
+['remote "ucloud-storage-scRNAseq-AAE"']
+url = /Volumes/dav.cloud.sdu.dk/dataset-storage/scRNAseq-AAE
+['remote "ucloud-storage-HABITUS"']
+url = /Volumes/dav.cloud.sdu.dk/dataset-storage/HABITUS
