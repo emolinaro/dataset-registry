@@ -6,7 +6,7 @@ Dataset registry for multiple DVC projects.
 To add new datasets used in a DVC project repository on GitHub:
 
 - Create a new folder with the same name as the GitHub repository (`github-repo`) where the project source code is stored.
-- Copy the project data inside the folder `<github-repo>`.
+- Copy the `<project-data>` inside the folder `<github-repo>`.
 - Inside `<github-repo>` run the command: `dvc add <project-data>`; this will create a new DVC-File, which is a pointer to the real dataset.
 - Create a new remote storage folder (in this case the storage folder is on Abacus):
   ```bash
