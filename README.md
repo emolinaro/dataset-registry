@@ -8,7 +8,7 @@ To add new datasets used in a DVC project repository on GitHub:
 - Create a new folder with the same name as the GitHub repository `<github-repo>` where the project source code is stored.
 - Copy the `<project-data>` inside the folder `<github-repo>`.
 - Inside `<github-repo>` run the command: `dvc add <project-data>`; this will create a new DVC-File, which is a pointer to the real dataset.
-- Create a new remote data storage:
+- Create a new remote dataset storage:
   ```bash
   dvc remote add -d abacus-storage-<github-repo> ssh://fe.deic.sdu.dk:/work/sduescience/molinaro/dataset-storage/<github-repo>
   dvc remote modify abacus-storage-<github-repo> user molinaro
