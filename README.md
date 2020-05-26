@@ -19,7 +19,7 @@ To add new datasets used in a DVC project repository on GitHub:
 - Push the data to the selected dataset storage:
   ```bash
   cd <github-repo>
-  dvc push DVC-File -r dropbox-storage-<github-repo>
+  dvc push DVC-File -r abacus-storage-<github-repo>
   ```
 - (Optional) Remove the data folder inside `<github-repo>`; the latter can be recovered from the dataset storage with the command: `dvc pull /path/to/DVC-File`.
 - (Optional) Change cache directory:
